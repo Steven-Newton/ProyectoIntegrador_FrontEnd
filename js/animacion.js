@@ -1,5 +1,5 @@
 //"use strict" --> activa el modo estricto, en teoria evita errores de sintaxis, pero usarse con precausión
-const ul = document.querySelector("ul"); //querySelector me permite traerlo con la etiqueta ul, y al solo tener esa etiqueta, no hay que llamarla de otra forma
+const ul = document.getElementById("animacionEcoInclusive"); //querySelector me permite traerlo con la etiqueta ul, y al solo tener esa etiqueta, no hay que llamarla de otra forma
 
 function marco(){
     const ani = ul.animate([ //ul.animate nos regresa un objeto animación
