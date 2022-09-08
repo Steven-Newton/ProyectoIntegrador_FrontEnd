@@ -3,8 +3,8 @@
     font-family: 'Lexend Deca', sans-serif;
 }
 main {
-    /* background-color: rgba(0, 0, 0, 0.608); */
-    color: black;
+/*     background-color: rgba(240, 255, 194, 0.608); 
+ */    color: black;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     line-height: 15px;
@@ -12,14 +12,14 @@ main {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     text-shadow: black 0.08em 0.08em 0.09em
+
 }
 
 nav {
     display: inline-block;
 }
 body {
-    /* background-image : url("../src/background-leafs\ 2.jpg"); */
-    background-color: #fffeff78;
+/*    background-image : url("../src/background-leafs\ 2.jpg"); */
     background-size:cover;
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -126,10 +126,10 @@ body {
     background-color: rgb(196, 49, 196);
 }
 footer{
-background-color:#CBDC10;
+background-color:#B9DD52;
 }
 header{
-    background-color:#CBDC10;
+    background-color:#B9DD52 ;
 }
 
 
