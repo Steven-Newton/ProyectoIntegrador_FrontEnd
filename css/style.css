@@ -1,3 +1,6 @@
+*{
+	box-sizing: border-box;
+}
 body {
     margin: 0;  /*eliminar el margen predeterminado de body*/
     background-image: url(https://www.dream-alcala.com/wp-content/uploads/2016/11/hojas-de-oto%C3%B1o-1068x712.gif);
@@ -8,6 +11,7 @@ body {
     width: 40%;
     margin: 70px auto;   /*margen de 70px superior e inferior del contenedor*/
                          /*margen de izquierda y derecha auto*/
+    
 }
 
 /*  .list {
