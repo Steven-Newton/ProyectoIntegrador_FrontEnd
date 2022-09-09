@@ -275,3 +275,11 @@ header{
   }
 }
 
+  @media (max-width: 500px) {
+    h4 {
+        opacity: 0;
+        padding:8px 12px;
+    }
+  }
+
+
