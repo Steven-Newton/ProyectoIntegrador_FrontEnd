@@ -5,10 +5,7 @@ btnSubmit.addEventListener("click", function (e) {
   let campoEmail = document.getElementById("email");
   let campoTel = document.getElementById("tel");
   let campoMensaje = document.getElementById("mensaje");
-
-  console.log(campoNombre.value, campoEmail.value);
-  console.log(typeof campoNombre.value, typeof campoEmail.value);
-  console.log(campoNombre.value.length, campoEmail.value.length);
+  let check = true;
 
   if (
     campoNombre.value.length >= 3 &&
@@ -21,6 +18,7 @@ btnSubmit.addEventListener("click", function (e) {
   } else {
     campoNombre.classList.remove("is-valid");
     campoNombre.classList.add("is-invalid");
+    check = false;
   }
 
   //validación email
@@ -31,16 +29,34 @@ btnSubmit.addEventListener("click", function (e) {
   } else {
     campoEmail.classList.remove("is-valid");
     campoEmail.classList.add("is-invalid");
+    check = false;
+
   }
 
   //validación teléfono
-  if (campoTel.value.length == 10 && !isNaN(campoTel.value)) {
+  if (campoTel.value.length == 10 && !isNaN(campoTel.value)&& campoTel.value>1000000000) {
     campoTel.classList.remove("is-invalid");
     campoTel.classList.add("is-valid");
   } else {
     campoTel.classList.remove("is-valid");
     campoTel.classList.add("is-invalid");
+    check = false;
+
   }
+  if(check){
+  Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "elorgullodelmono@gmail.com",
+      Password : "B741E7D48F8DA0F5E26F55EEA9C05EB63E2F",
+      To : 'elorgullodelmono@gmail.com',
+      From : 'elorgullodelmono@gmail.com',
+      Subject : "Contacto",
+      Body : `${campoNombre.value}(${campoEmail.value}): ${520000000000+campoTel.value} dice:  ${campoMensaje.value} `
+  }).then(
+    message => alert(message)
+  ); 
+  }
+
 });
 
 //Función para validar e-mail
