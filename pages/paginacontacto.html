@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ol class="navbar-nav ml-auto ">
                 <li class="nav-item active">
-                  <a class="nav-link"" href="#">About us <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#">About us <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-itemjustify-content-end">
                   <a class="nav-link" href="#">Contact us</a>
@@ -38,22 +38,26 @@
       </header>
       <div>
         <h1>Contacto</h1>
+
+        <img src="/src/call-3613071.png" width="20%" class="rounded float-right" alt="imagen">
+        
+        <div class="mb-3">
         <form>
             <div class="form-group">
-                <label for="exampleFormControlInput1" >Nombre</label>
-                              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Escribe tu nombre">
+                <label for="exampleFormControlInput1" width="20%" >Nombre</label>
+                              <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Escribe tu nombre">
 
               </div>
 
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <div class="form-group ">
+              <label for="exampleFormControlInput1">Correo electrónico</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="tucorreo@ejemplo.com">
             </div>
             
-            <!-- <div class="form-group">
-              <label for="exampleFormControlSelect2"  >Mensaje</label>
-              <input type="-area" class="form-control col-md-6" placeholder="">
-            </div> -->
+            <div class="form-group ">
+              <label for="exampleFormControlInput1">Teléfono de contacto (10 dígitos)</label>
+              <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="(+52)5588880000" required>
+            </div>
             
             <div class="mb-3">
                 <label for="validationTextarea">Mensaje</label>
@@ -64,6 +68,7 @@
               </div>
 
           </form>
+        </div>
           <button type="button" class="btn btn-primary">Enviar</button>
       </div>
 
