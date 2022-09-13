@@ -1,0 +1,41 @@
+
+.demo-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .demo-bg {
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  .demo-content {
+    position: relative;
+  }
+/* Opacidad de imagen de fondo */
+
+.bdivheader {
+    display: flex;
+    align-items:center; 
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    
+}
+
+.bheader {
+    background-image: url(https://th.bing.com/th/id/R.a63c8aad889ee01dd1d5ced58181a713?rik=hM84yZzT7a0cfg&riu=http%3a%2f%2fwww.yogabuddhi.cl%2fwp-content%2fuploads%2f2013%2f10%2fnaturaleza-1.jpg&ehk=nm4CMx1hjVSLHeDxi5XGcYrBpqPMqeVvFdf3hI4w7oM%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    color: white;
+    height: 250px; 
+}
+
+.bnav {
+    background-color: white;
+}
+
+
