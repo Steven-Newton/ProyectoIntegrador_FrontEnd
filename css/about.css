@@ -125,16 +125,6 @@ body {
 #l6{
     background-color: rgb(196, 49, 196);
 }
-footer{
-background-color:#B9DD52;
-}
-header{
-    background-color:#B9DD52 ;
-}
-
-
-
-
 @media (min-width: 576px) {
   html  {
     font-size:12px;
