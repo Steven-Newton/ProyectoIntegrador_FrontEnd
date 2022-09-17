@@ -23,8 +23,8 @@ window.addEventListener("load", function(){
           </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="./login.html">Login</a></button>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="./carrito.html">Cart</a></button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="./login.html"><i class="bi bi-person-circle"></i>Login</a></button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="./carrito.html"><i class="bi bi-cart4"></i>Cart</a></button>
       </form>
     </div>
   </nav>`;
@@ -32,9 +32,9 @@ window.addEventListener("load", function(){
   barra2.innerHTML +=`
       <div class="container text-center ">
          <ul class="list-inline">
-                <li class="list-inline-item"><a style="color:black;" href="#">About us</a></li>
-                <li class="list-inline-item"><a style="color:black;" href="#">Donations</a></li>
-                <li class="list-inline-item"><a style="color:black;" href="#">Contact</a></li>
+                <li class="list-inline-item"><a style="color:black;" href="./about.html">About us</a></li>
+                <li class="list-inline-item"><a style="color:black;" href="./donaciones.html">Donations</a></li>
+                <li class="list-inline-item"><a style="color:black;" href="./contact.html">Contact</a></li>
             </ul>
              <small>Copyright &copy; JavaMonos</small>
         </div> `
