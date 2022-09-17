@@ -1,3 +1,5 @@
+
+
 window.addEventListener("load", function(){
     barra.innerHTML += `<nav class="navbar navbar-expand-lg navbar-light bg-light">  
     <a class="navbar-brand">EcoInclusive</a>
@@ -26,4 +28,14 @@ window.addEventListener("load", function(){
       </form>
     </div>
   </nav>`;
+
+  barra2.innerHTML +=`
+      <div class="container text-center ">
+         <ul class="list-inline">
+                <li class="list-inline-item"><a style="color:black;" href="#">About us</a></li>
+                <li class="list-inline-item"><a style="color:black;" href="#">Donations</a></li>
+                <li class="list-inline-item"><a style="color:black;" href="#">Contact</a></li>
+            </ul>
+             <small>Copyright &copy; JavaMonos</small>
+        </div> `
 });
