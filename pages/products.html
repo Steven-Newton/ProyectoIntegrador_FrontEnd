@@ -5,104 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/products.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Products</title>
 </head>
-
-<body>
-
+<header">
+    <div id="barra" ></div>
+</header>
+<body style="background-color: green;">
+    <br>
+    <main class="container " style="background-color: white;">
+        
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1" checked value="parteSuperior">
+            <label class="custom-control-label" for="customCheck1">Parte Superior</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck2" checked value="parteInferior">
+            <label class="custom-control-label" for="customCheck2">Parte Inferior</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck3" checked value="accesorios" >
+            <label class="custom-control-label" for="customCheck3">Accesorios</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck4" checked value="zapatos">
+            <label class="custom-control-label " for="customCheck4" >Zapatos</label>
+          </div>
+        </div>
+        <div class="row" id="productos">
+        </div>
+      
     <div  class="container" id="productos">
 
     </div>
- 
-    <div class="container mt-5" id="mainProducts">
 
+</main> 
 
-        <div class="row">
-
-            <div class="col-md-3">
-
-
-
-                <div class="card">
-
-                    <div class="image-container">
-
-                        <div class="first">
-
-                            <div class="d-flex justify-content-between align-items-center">
-
-                                <span class="discount">-25%</span>
-                                <span class="wishlist"><i class="fa fa-heart-o"></i></span>
-
-
-                            </div>
-                        </div>
-
-                        <img src="../src/brian-lawson-IaEXpuB8_c0-unsplash.jpg"
-                            class="img-fluid rounded thumbnail-image" height="800px" width="800px">
-
-
-                    </div>
-
-
-                    <div class="product-detail-container p-2">
-
-                        <div class="d-flex justify-content-between align-items-center">
-
-                            <h5 class="dress-name">White traditional long dress</h5>
-
-                            <div class="d-flex flex-column mb-2">
-
-                                <span class="new-price">$3.99</span>
-                                <small class="old-price text-right">$5.99</small>
-                            </div>
-
-                        </div>
-
-
-                        <div class="d-flex justify-content-between align-items-center pt-1">
-
-                            <div class="color-select d-flex ">
-
-                                <h5 class="dress-name">T-shirts</h5>
-
-                            </div> 
-
-                        </div>
-
-
-                        <div class="d-flex justify-content-between align-items-center pt-1">
-                            <div>
-                                <i class="fa fa-star-o rating-star"></i>
-                                <span class="rating-number">4.8</span>
-                            </div>
-
-                            <button class="button">
-                                <span>Add to cart</span>
-                                <div class="cart">
-                                    <svg viewBox="0 0 36 26">
-                                        <polyline points="1 2.5 6 2.5 10 18.5 25.5 18.5 28.5 7.5 7.5 7.5"></polyline>
-                                        <polyline points="15 13.5 17 15.5 22 10.5"></polyline>
-                                    </svg>
-                                </div>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>  
-
+        <script src="../js/main.js"></script>
         <script src="../js/products.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -111,5 +52,8 @@
             integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
             crossorigin="anonymous"></script>
 </body>
-
+<br>
+<footer style="background-color: white;">
+    <div id = "barra2"></div>
+ </footer>
 </html>

@@ -14,49 +14,51 @@
 </head>
 
 <body>
-<div class="container-sm">
-
-    <h1>Formulario de Productos</h1>
-    
+    <main class="container-xl w-100">
+        <h1>Formulario de Productos</h1>
         <form>
             <div class="form-row">
-                <div class="col-4-md">
-                    <input type="text" class="form-control" placeholder="SKU">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="SKU" id="sku">
                 </div>
-                <div class="col-8-md">
-                    <input type="text" class="form-control" placeholder="Nombre del producto">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-4-md">
-                    <input type="text" class="form-control" placeholder="Precio">
-                </div>
-                <div class="col-8-md">
-                    <input type="text" class="form-control" placeholder="Descripción">
+                <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="Nombre del producto" id="product">
                 </div>
             </div>
             <div class="form-row">
-                <div class="col-4-md">
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Categoría</option>
-                    <option value="1">Parte superior</option>
-                    <option value="2">Parte inferior</option>
-                    <option value="3">Zapatos</option>
-                    <option value="3">Accesorios</option>
-                </select>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Precio" id="price">
                 </div>
-                <div class="col-8-md">
+                <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="Descripción" id="Description">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4">
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Categoría</option>
+                        <option value="1">Parte superior</option>
+                        <option value="2">Parte inferior</option>
+                        <option value="3">Zapatos</option>
+                        <option value="4">Accesorios</option>
+                    </select>
+                </div>
+                <div class="col-md-8">
                     <input type="text" class="form-control" placeholder="Descuento">
                 </div>
-         </form>
-    </div>
-    <div class="form-row">
-        <div class="col-3-md">
-            <input type="text" class="form-control" placeholder="URL de la imagen">
-            </div></div>
-    <div class=""><a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"
-            id="registrar">Registrar</a></div>
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="URL de la imagen" id="urlk">
+                    </div>
+                </div>
+                <div class="">
+                    <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="registrar">Registrar</a>
+                </div>
+        </form>
+   
 
+    </main>
+    <script src="../js/formulario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
