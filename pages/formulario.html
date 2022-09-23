@@ -14,46 +14,49 @@
 </head>
 
 <body>
-    <main class="container-xl w-100">
+    <main class="container text-center ">
         <h1>Formulario de Productos</h1>
-        <form>
+        <form >
             <div class="form-row">
-                <div class="col-md-4">
-                    <input type="text" class="form-control" placeholder="SKU" id="sku">
+                <div class="col-md-2">
+                    <input type="text" class="form-control"  id="sku" disabled>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-10">
                     <input type="text" class="form-control" placeholder="Nombre del producto" id="product">
                 </div>
             </div>
             <div class="form-row">
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <input type="text" class="form-control" placeholder="Precio" id="price">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-10">
                     <input type="text" class="form-control" placeholder="Descripción" id="Description">
                 </div>
             </div>
             <div class="form-row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Categoría</option>
-                        <option value="1">Parte superior</option>
-                        <option value="2">Parte inferior</option>
-                        <option value="3">Zapatos</option>
-                        <option value="4">Accesorios</option>
-                    </select>
+                        <option selected value="parteSuperior">Parte superior</option>
+                        <option value="parteInferior">Parte inferior</option>
+                        <option value="zapatos">Zapatos</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select> 
                 </div>
-                <div class="col-md-8">
-                    <input type="text" class="form-control" placeholder="Descuento">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Descuento" id="Descuento">
                 </div>
-                <div class="form-row">
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" placeholder="URL de la imagen" id="urlk">
-                    </div>
+
+            <div class="form-row">
+            </div>
+                <div class="col-md-10">
+                <input type="text" class="form-control" placeholder="URL de la imagen" id="urlk">
                 </div>
-                <div class="">
-                    <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="registrar">Registrar</a>
+            
+                <div class="col-md-2 ">
+                    <a href="#" class="btn btn-primary btn-block active" role="button" aria-pressed="true" id="registrar">Registrar</a>
                 </div>
+            </div>
+           
         </form>
    
 
