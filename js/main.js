@@ -1,30 +1,54 @@
-const ul = document.querySelector("ul")
 
+window.addEventListener("load", function(){
+    barra.innerHTML += `
+    <header class="sticky-top headerA"> 
+    
+    <nav class="navbar navbar-expand-lg navbar-light  ">
+        <a  class="navbar-brand" href="#"><img class="ecoinclusive" src="../src/logoei.png" alt="" srcset=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ol class="navbar-nav ml-auto ">
+          <li class="nav-item">
+          <a class="nav-link" href="./products.html">Productos</a>
+        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./carrito.html">Carrito de compras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Inicio de sesión</a>
+              </li>
+          </ol>
+        </div>
+      </nav>
+  </header><hr>`
+  ;
 
-function cuadro (){
-    const an = ul.animate([    //función de js que regresa una animación.  
-        //keyframes
-        {transform: "TranslateY(0px)"},   // transform= propiedad que permite mover un elemento
-        {transform: "TranslateY(-70px)"}  // utiliza las cordenadas, en este caso de Y, porque la animación se mueve en este eje.
-    ],{ 
-        //options
-        easing:"Linear",  //movimiento lineal.
-        iterations: 1,    // una transición por palabra, número de repetición de esta transición.
-        duration: 1000, //milisegundos, velocidad
+  barra2.innerHTML +=`
+      <div class="container text-center ">
+         <ul class="list-inline">
+                <li class="list-inline-item"><a style="color:black;" href="./about.html">Nosotros</a></li>
+                <li class="list-inline-item"><a style="color:black;" href="./donaciones.html">Donaciones</a></li>
+                <li class="list-inline-item"><a style="color:black;" href="./contact.html">Contacto</a></li>
+            </ul>
+             <small>Copyright &copy; JavaMonos</small>
+        </div> `
+});
 
-    });
-    return an.finished;   //promesa de finalización de la animación
-}
+$(document).ready(function () {
 
-function desplazo (){      //llama función cuadro.
-    cuadro()
-    .then((res)=>{
-        console.log(res);
-        ul.appendChild(document.querySelectorAll("ul > li")[0])
-    })   //con appendChild, como el nombre lo dice, se le da un hijo al elemento ul, con este
-         // y la ayuda de document.querySelectorAll podemos crear la repetición de la animación
-}
+  $('.first-button').on('click', function () {
 
-setInterval(() =>{
-    desplazo()
-    }, 2000); //milisegundos del desplazo
+    $('.animated-icon1').toggleClass('open');
+  });
+  $('.second-button').on('click', function () {
+
+    $('.animated-icon2').toggleClass('open');
+  });
+  $('.third-button').on('click', function () {
+
+    $('.animated-icon3').toggleClass('open');
+  });
+});

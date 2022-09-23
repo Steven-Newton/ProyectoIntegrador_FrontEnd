@@ -9,10 +9,11 @@ btnSubmit.addEventListener("click", function (e) {
 
   if (
     campoNombre.value.length >= 3 &&
-    campoNombre.value.length <= 15 &&
+    campoNombre.value.length <= 35 &&
     isNaN(campoNombre.value)
   ) {
     //validación nombre
+    campoNombre.value.toUpperCase();
     campoNombre.classList.remove("is-invalid");
     campoNombre.classList.add("is-valid");
   } else {
@@ -42,7 +43,19 @@ btnSubmit.addEventListener("click", function (e) {
     campoTel.classList.add("is-invalid");
     check = false;
 
-  }
+    }
+
+    if (campoMensaje.value.length >= 10 &&
+      campoMensaje.value.length <= 250) {
+      campoMensaje.classList.remove("is-invalid");
+      campoMensaje.classList.add("is-valid");
+    } else {
+      campoMensaje.classList.remove("is-valid");
+      campoMensaje.classList.add("is-invalid");
+      check = false;
+  
+      }
+   
   if(check){
   Email.send({
       Host : "smtp.elasticemail.com",
