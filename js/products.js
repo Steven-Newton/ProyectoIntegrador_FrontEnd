@@ -23,7 +23,7 @@
               response.json().then((data)=>{
                   data.forEach(e => {
                     console.log(e);
-
+                    lista.push(e);
                     additem(e);
               })
               }).catch((error)=>{
@@ -37,17 +37,16 @@
       function additem(e) {
         document.getElementById("productos").innerHTML += 
         `  
-        <div class="col-md-3 ${e.category}">
+        <div class="col-md-3 ${e.category}" id="SKU${e.id}">
             <div class="card">
                 <div class="image-container">
                     <div class="first">
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="discount">-25%</span>
+                            <span class="discount">-${e.descuento}</span>
                             <span class="wishlist"><i class="fa fa-heart-o"></i></span>
                         </div>
                     </div>
-                    <img src="${e.image}"
-                        class="img-fluid rounded thumbnail-image" id="foto">
+                    <img src="${e.image}" class="img-fluid rounded thumbnail-image imgtest" id="foto">
                 </div>
                 <div class="product-detail-container p-2">
                     <div class="d-flex justify-content-between align-items-center"
@@ -58,22 +57,16 @@
                     </div>
                     <div class="d-flex justify-content-between align-items-center pt-1">
                         <div class="color-select d-flex ">
-                            <h5 class="dress-name">T-shirts</h5>
+                            <h5 class="dress-name">${e.category}</h5>
                         </div> 
                     </div>
                     <div class="d-flex justify-content-between align-items-center pt-1">
                         <div>
                             <i class="fa fa-star-o rating-star"></i>
-                            <span class="rating-number">4.8</span>
+                            <span class="rating-number">${e.rating.rate}</span>
                         </div>
                         <button class="button">
                             <span>Add to cart</span>
-                            <div class="cart">
-                                <svg viewBox="0 0 36 26">
-                                    <polyline points="1 2.5 6 2.5 10 18.5 25.5 18.5 28.5 7.5 7.5 7.5"></polyline>
-                                    <polyline points="15 13.5 17 15.5 22 10.5"></polyline>
-                                </svg>
-                            </div>
                         </button>
                     </div>
                 </div>
@@ -82,19 +75,14 @@
   `  
     ;
       }
-
-
-      
       let checked1 = (document.getElementById("customCheck1")) ;
       let checked2 = (document.getElementById("customCheck2")) ;
       let checked3 = (document.getElementById("customCheck3")) ;
       let checked4 = (document.getElementById("customCheck4")) ;
-      
       checked1.addEventListener("click",filtro);
       checked2.addEventListener("click",filtro);
       checked3.addEventListener("click",filtro);
       checked4.addEventListener("click",filtro);
-      
       function filtro(e){
           let elementos =  Array.from(document.getElementsByClassName(e.target.value));
           elementos.forEach(element => {
@@ -107,4 +95,18 @@
                   element.style.display = "none";
               } 
           });
-      }      
+
+      } 
+
+    btn = document.getElementById("search");     
+
+    btn.addEventListener("click",function(e) {
+        e.preventDefault();
+        lista.forEach(element => {
+           if(JSON.stringify(element).toLowerCase().includes(document.getElementById("searchtxt").value.toLowerCase())){
+                console.log(`${element.title} incluye el texto ${document.getElementById("searchtxt").value}`);
+                document.getElementById("SKU"+element.id).style.display = "block";
+           }else{
+            document.getElementById("SKU"+element.id).style.display = "none";
+        }});
+    })
