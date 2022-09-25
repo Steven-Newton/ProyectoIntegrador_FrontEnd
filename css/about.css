@@ -18,15 +18,13 @@ main {
     margin: 2rem;
 }
 .mv{
-    
     background-color: #C7D322;
-    
     height: 60px;
     font-size: 40px;
-padding: 25px;
-border-radius: 54px 0px 52px 0px;
--webkit-border-radius: 54px 0px 52px 0px;
--moz-border-radius: 54px 0px 52px 0px;
+    padding: 25px;
+    border-radius: 54px 0px 52px 0px;
+    -webkit-border-radius: 54px 0px 52px 0px;
+    -moz-border-radius: 54px 0px 52px 0px;
 
 }
 
@@ -318,7 +316,7 @@ body {
   }
 }
 
-  @media (max-width: 500px) {
+  @media (max-width:1500px) {
     h4 {
         opacity: 0;
         padding:8px 12px;

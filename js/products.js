@@ -1,4 +1,4 @@
-    
+
     key = "data";
     let lista = [];
     if (localStorage.getItem(key)) {
@@ -22,7 +22,6 @@
           promesa.then((response)=>{
               response.json().then((data)=>{
                   data.forEach(e => {
-                    console.log(e);
                     lista.push(e);
                     additem(e);
               })

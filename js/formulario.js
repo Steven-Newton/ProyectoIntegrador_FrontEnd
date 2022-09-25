@@ -58,7 +58,11 @@ btn.addEventListener("click", function (e) {
     check = false;
   }
     if (check) {
-        let ContenidoTabla ={"id":id.value,"title":title.value,"price":(price.value),"description":Description.value,"category":category.value,"image":urlk.value,"rating":{"rate":3+Math.random*2,"count":Math.floor(Math.random*1000) },"descuento":descuento.id+"%"}
+        let ContenidoTabla =
+        {"id":id.value,"title":title.value,"price":(price.value),
+        "description":Description.value,"category":category.value,
+        "image":urlk.value,"rating":{"rate": 4.5,
+        "count":Math.floor(Math.random*1000) },"descuento":descuento.value+"%"}
         lista.push(ContenidoTabla);
         localStorage.setItem(key,JSON.stringify(lista));
     }   
