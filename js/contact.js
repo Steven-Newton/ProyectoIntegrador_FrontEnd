@@ -44,9 +44,11 @@ btnSubmit.addEventListener("click", function (e) {
     check = false;
 
     }
+    
 
     if (campoMensaje.value.length >= 10 &&
-      campoMensaje.value.length <= 250) {
+      campoMensaje.value.length <= 250
+      && campoMensaje.value.replace(/ /g, "").length>10) {
       campoMensaje.classList.remove("is-invalid");
       campoMensaje.classList.add("is-valid");
     } else {

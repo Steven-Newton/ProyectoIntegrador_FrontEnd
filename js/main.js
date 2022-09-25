@@ -36,7 +36,7 @@ barra2.innerHTML +=`
       </div> `
 });
 
-$(document).ready(function () {
+/* $(document).ready(function () {
 
 $('.first-button').on('click', function () {
 
@@ -50,4 +50,4 @@ $('.third-button').on('click', function () {
 
   $('.animated-icon3').toggleClass('open');
 });
-});
+}); */
