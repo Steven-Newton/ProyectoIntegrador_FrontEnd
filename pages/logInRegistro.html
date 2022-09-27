@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./STYLE/logInRegistro.css">
+
+    <title>Registro de Usuarios</title>
+</head>
+
+<body>
+    <div class="container right-panel-active">
+        <!-- REGISTRO DE USUARIOS -->
+        <div class="container__form container--signup">
+            <div action="#" class="form" id="form1">
+                <hr>
+        
+                <h2 class="form__title">Regístrate</h2>
+
+                <div class="input-group" id="input">
+
+                    <input type="text" placeholder="Nombre" class="input" />
+                    <label class="placeholder"></label>
+                    <input type="text" placeholder="Teléfono" class="input" />
+                    <label class="placeholder"></label>
+                    <input type="email" placeholder="Email" class="input" />
+                    <label class="placeholder"></label>
+                    <input type="password" placeholder="Contraseña" class="input" />
+                    <label class="placeholder"></label>
+                    <input type="password" placeholder="Confirme Contraseña" class="input" />
+                    <label class="placeholder"></label>
+                    <!-- <input type="password" placeholder="Confirma Contraseña" class="input" />
+                    <label class="placeholder"></label> -->
+                    <button class="btn">Registrate</button>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+        <!-- INICIO DE SESIÓN -->
+        <div class="container__form container--signin">
+            <form action="#" class="form" id="form2">
+                <hr>
+                <h2 class="form__title">Accede</h2>
+                <input type="email" placeholder="Email" class="input" />
+                <input type="password" placeholder="Contraseña" class="input" />
+                <a href="#" class="linkContraseña">¿Olvidaste tu contraseña?</a>
+                <button class="btn">Accede</button>
+            </form>
+        </div>
+
+        <!-- EFECTO ENTRE REGISTRATE Y ACCEDE-->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <button class="btn" id="signIn">Accede</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <button class="btn" id="signUp">Regístrate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/logInRegistro.js"></script>
+</body>
+
+</html>
