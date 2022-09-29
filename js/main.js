@@ -16,7 +16,7 @@ window.addEventListener("load", function(){
             <a class="nav-link" href="./carrito.html">Carrito de compras</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="./login.html">Inicio de sesión</a>
+              <a class="nav-link" href="./logInRegistro.html">Inicio de sesión</a>
            </li>
         </ol>
       </div>
