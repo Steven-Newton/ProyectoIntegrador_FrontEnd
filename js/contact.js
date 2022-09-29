@@ -77,7 +77,7 @@ btnSubmit.addEventListener("click", function (e) {
 //Función para validar e-mail
 function ValidateEmail(input) {
   let valid =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    /^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}/;
 
   if (input.match(valid)) {
     return true;

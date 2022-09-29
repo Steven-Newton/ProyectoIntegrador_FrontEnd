@@ -10,31 +10,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Formulario</title>
-
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/formulario.css">
 </head>
 
 <body>
+    <header class="sticky-top headerA">
+        <div id="barra"></div>
+    </header>
+    
     <main class="container text-center ">
-        <h1>Formulario de Productos</h1>
+        <img id="imagen1" class="img_anim" src="../src/logoei.png" width="60%" alt="">
+        <h1 id="imagen2" class="intro typography-hero-intro derecha">Formulario</h1>
         <form >
             <div class="form-row">
-                <div class="col-md-2">
+                <div class="col-md-2"> <strong>SKU</strong>
                     <input type="text" class="form-control"  id="sku" disabled>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-10"> <strong>NOMBRE DEL PRODUCTO</strong>
                     <input type="text" class="form-control" placeholder="Nombre del producto" id="product">
                 </div>
             </div>
             <div class="form-row">
-                <div class="col-md-2">
+                <div class="col-md-2"> <strong>PRECIO</strong>
                     <input type="text" class="form-control" placeholder="Precio" id="price">
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-10"> <strong>DESCRIPCIÓN DEL PRODUCTO</strong>
                     <input type="text" class="form-control" placeholder="Descripción" id="Description">
                 </div>
             </div>
             <div class="form-row">
-                <div class="col-md-6">
+                <div class="col-md-6"> <strong>CATEGORIA</strong>
                     <select class="custom-select" id="inputGroupSelect01">
                         <option selected value="parteSuperior">Parte superior</option>
                         <option value="parteInferior">Parte inferior</option>
@@ -42,25 +48,28 @@
                         <option value="accesorios">Accesorios</option>
                     </select> 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6"> <strong>DESCUENTO</strong> 
                     <input type="text" class="form-control" placeholder="Descuento" id="Descuento">
                 </div>
 
             <div class="form-row">
             </div>
-                <div class="col-md-10">
+                <div class="col-md-10"> <strong>URL</strong>
                 <input type="text" class="form-control" placeholder="URL de la imagen" id="urlk">
                 </div>
             
-                <div class="col-md-2 ">
+                <div class="col-md-2 "> <br>
                     <a href="#" class="btn btn-primary btn-block active" role="button" aria-pressed="true" id="registrar">Registrar</a>
                 </div>
             </div>
            
         </form>
    
-
+        <footer>
+            <div id="barra2"></div>
+          </footer>
     </main>
+    <script src="../js/main.js"></script>
     <script src="../js/formulario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
