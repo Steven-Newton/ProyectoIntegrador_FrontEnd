@@ -26,7 +26,7 @@ window.addEventListener("load", function(){
 
 barra2.innerHTML +=`
 <hr>
-    <div class="container text-center ">
+    <div class="containernav text-center ">
        <ul class="list-inline">
               <li class="list-inline-item"><a style="color:black;" href="./about.html">Nosotros</a></li>
               <li class="list-inline-item"><a style="color:black;" href="./donaciones.html">Donaciones</a></li>
