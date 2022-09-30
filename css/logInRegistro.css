@@ -19,7 +19,7 @@
 } */
 }
 
-body {
+.main {
     align-items: center;
     background-color: var(--white);
     background: url("/SRC/LGBT.jpg");

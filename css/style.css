@@ -1,11 +1,13 @@
 nav{
     background-color: #f7f8f5;
+    font-size: medium;
 }
 
 footer{
     background-color: #f7f8f5;
     text-align: center;
     width: 100%;
+    font-size: medium;
 }
 .ecoinclusive{
     width: 150px;

@@ -16,7 +16,7 @@ window.addEventListener("load", function(){
             <a class="nav-link" href="./carrito.html">Carrito de compras</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="./login.html">Inicio de sesión</a>
+              <a class="nav-link" href="./loginRegistro.html">Inicio de sesión</a>
            </li>
         </ol>
       </div>
@@ -26,7 +26,7 @@ window.addEventListener("load", function(){
 
 barra2.innerHTML +=`
 <hr>
-    <div class="container text-center ">
+    <div class="containernav text-center ">
        <ul class="list-inline">
               <li class="list-inline-item"><a style="color:black;" href="./about.html">Nosotros</a></li>
               <li class="list-inline-item"><a style="color:black;" href="./donaciones.html">Donaciones</a></li>
