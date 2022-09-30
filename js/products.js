@@ -16,7 +16,7 @@
     }));
 
       const getData = () => {
-        let promesa =  fetch("http://127.0.0.1:5504/../js/data.json",{
+        let promesa =  fetch("http://127.0.0.1:5505/../js/data.json",{
               method:"GET"
           });
           promesa.then((response)=>{
