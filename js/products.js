@@ -64,7 +64,7 @@
                             <i class="fa fa-star-o rating-star"></i>
                             <span class="rating-number">${e.rating.rate}</span>
                         </div>
-                        <button class="button">
+                        <button class="button" >
                             <span>Add to cart</span>
                         </button>
                     </div>

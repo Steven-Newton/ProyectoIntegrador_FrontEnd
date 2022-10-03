@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
           <li class="nav-item">
             <a class="nav-link" href="./products.html">Productos</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item"  id="carritoN">
             <a class="nav-link" href="./carrito.html">Carrito de compras</a>
           </li>
           <li class="nav-item">
@@ -22,7 +22,11 @@ window.addEventListener("load", function(){
       </div>
   </nav>
 </header><hr>`
-;
+
+document.getElementById("carritoN").style.display = "none";
+if (localStorage.getItem('login')) {
+  document.getElementById("carritoN").style.display = "block";
+}
 
 barra2.innerHTML +=`
 <hr>
