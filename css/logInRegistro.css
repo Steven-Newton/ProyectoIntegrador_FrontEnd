@@ -19,6 +19,10 @@
 } */
 }
 
+.separacion{
+    height: 60px;
+}
+
 .main {
     align-items: center;
     background-color: var(--white);
@@ -217,17 +221,41 @@
 
 }
 
+#registratecss{
+    display: none;
+}
+#signincss{
+    display: none;
+}
 @media (max-width: 767px){
 
 
-    .containerc.right-panel-active .containerc--signin {
-        transform: translatey(100%);
+    /* .overlay{
+        display: none;
+    } */
+    .containerc__overlay{
+        display: none;
     }
-    .containerc--signin {
-        left: 0;
-        width: 50%;
-        z-index: 2;
+    .containerc.right-panel-active .containerc--signup{
+    transform: none;
     }
+    .containerc--signup{
+        width: 100%;
+    }
+    #registratecss{
+    display:inline;
+    }
+    #signincss{
+        display: inline;
+    }
+    .containerc__form .containerc--signin {
+        transform: none;
+    }
+    .containerc--signin{
+        width: 100%;
+    }
+
+
 }
 
 /* 

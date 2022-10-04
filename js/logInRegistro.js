@@ -12,9 +12,16 @@ const secondForm = document.getElementById("form2");
 const containerc = document.querySelector(".containerc");
 const passwordV = document.getElementById("passwordIngresar");
 const emailV = document.getElementById("mailIngresar");
+const registratecss = document.getElementById("registratecss");
+const signincss = document.getElementById("signincss");
 
+signincss.addEventListener("click", () => {
+	containerc.classList.add("right-panel-active");
+});
 
-
+registratecss.addEventListener("click", () => {
+    containerc.classList.remove("right-panel-active");
+  });
 
 const mapaUsuario = new Map();
 key = "user";
