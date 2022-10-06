@@ -9,10 +9,11 @@ btnSubmit.addEventListener("click", function (e) {
 
   if (
     campoNombre.value.length >= 3 &&
-    campoNombre.value.length <= 15 &&
+    campoNombre.value.length <= 35 &&
     isNaN(campoNombre.value)
   ) {
     //validación nombre
+    campoNombre.value.toUpperCase();
     campoNombre.classList.remove("is-invalid");
     campoNombre.classList.add("is-valid");
   } else {
@@ -34,7 +35,7 @@ btnSubmit.addEventListener("click", function (e) {
   }
 
   //validación teléfono
-  if (campoTel.value.length == 10 && !isNaN(campoTel.value)&& campoTel.value>1000000000) {
+  if (campoTel.value.length == 10 && !isNaN(campoTel.value)&& parseInt(campoTel.value)>1000000000) {
     campoTel.classList.remove("is-invalid");
     campoTel.classList.add("is-valid");
   } else {
@@ -42,7 +43,21 @@ btnSubmit.addEventListener("click", function (e) {
     campoTel.classList.add("is-invalid");
     check = false;
 
-  }
+    }
+    
+
+    if (campoMensaje.value.length >= 10 &&
+      campoMensaje.value.length <= 250
+      && campoMensaje.value.replace(/ /g, "").length>10) {
+      campoMensaje.classList.remove("is-invalid");
+      campoMensaje.classList.add("is-valid");
+    } else {
+      campoMensaje.classList.remove("is-valid");
+      campoMensaje.classList.add("is-invalid");
+      check = false;
+  
+      }
+   
   if(check){
   Email.send({
       Host : "smtp.elasticemail.com",
@@ -51,7 +66,7 @@ btnSubmit.addEventListener("click", function (e) {
       To : 'elorgullodelmono@gmail.com',
       From : 'elorgullodelmono@gmail.com',
       Subject : "Contacto",
-      Body : `${campoNombre.value}(${campoEmail.value}): ${520000000000+campoTel.value} dice:  ${campoMensaje.value} `
+      Body : `${campoNombre.value}(${campoEmail.value}): ${campoTel.value} dice:  ${campoMensaje.value} `
   }).then(
     message => alert(message)
   ); 
@@ -62,7 +77,7 @@ btnSubmit.addEventListener("click", function (e) {
 //Función para validar e-mail
 function ValidateEmail(input) {
   let valid =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    /^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}/;
 
   if (input.match(valid)) {
     return true;

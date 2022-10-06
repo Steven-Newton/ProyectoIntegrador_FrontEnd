@@ -1,13 +1,14 @@
 nav{
-    background-color: #B9DD52;
+    background-color: #f7f8f5;
+    font-size: medium;
 }
 
 footer{
-    background-color: #B9DD52;
+    background-color: #f7f8f5;
     text-align: center;
     width: 100%;
+    font-size: medium;
 }
-
-html {
-    background-color: greenyellow;
+.ecoinclusive{
+    width: 150px;
 }
