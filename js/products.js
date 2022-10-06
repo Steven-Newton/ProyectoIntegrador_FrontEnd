@@ -1,5 +1,9 @@
-
+    let carrito = [];
+    if(localStorage.getItem(localStorage.getItem('login'))){
+         carrito = localStorage.getItem(localStorage.getItem('login')).split(',');
+    }
     key = "data";
+    productodiv = document.getElementById('productos');
     let lista = [];
     if (localStorage.getItem(key)) {
      lista = (JSON.parse(localStorage.getItem(key)));
@@ -34,11 +38,17 @@
       }
       getData();
       function additem(e) {
-        document.getElementById("productos").innerHTML += 
-        `  
-        <div class="col-md-3 ${e.category}" id="SKU${e.id}">
-            <div class="card">
-                <div class="image-container">
+
+        var carta = document.createElement("div")
+        carta.classList.add("col-md-3")
+        carta.classList.add(e.category);
+        carta.id = `SKU${e.id}`;
+        productodiv.append(carta);
+        var carta1 = document.createElement("div")
+        carta1.classList.add("card");
+        carta.append(carta1);
+        carta1.innerHTML += 
+        `       <div class="image-container">
                     <div class="first">
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="discount">-${e.descuento}</span>
@@ -47,7 +57,13 @@
                     </div>
                     <img src="${e.image}" class="img-fluid rounded thumbnail-image imgtest" id="foto">
                 </div>
-                <div class="product-detail-container p-2">
+         `  
+         ;
+         var carta2 = document.createElement("div")
+         carta2.classList.add("product-detail-container");
+         carta2.classList.add("p-2")
+         carta1.append(carta2)
+         carta2.innerHTML += `
                     <div class="d-flex justify-content-between align-items-center"
                         <h5 class="dress-name">${e.title}</h5>
                         <div class="d-flex flex-column mb-2">
@@ -59,20 +75,25 @@
                             <h5 class="dress-name">${e.category}</h5>
                         </div> 
                     </div>
-                    <div class="d-flex justify-content-between align-items-center pt-1">
-                        <div>
-                            <i class="fa fa-star-o rating-star"></i>
-                            <span class="rating-number">${e.rating.rate}</span>
-                        </div>
-                        <button class="button" >
-                            <span>Add to cart</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-  `  
-    ;
+         `;
+         var carta3 = document.createElement("div")
+         carta3.classList.add("d-flex");
+         carta3.classList.add("justify-content-between");
+         carta3.classList.add("align-items-center");
+         carta3.classList.add("pt-1");
+         carta2.append(carta3);
+        carta3.innerHTML = `         <div>
+        <i class="fa fa-star-o rating-star"></i>
+        <span class="rating-number">${e.rating.rate}</span>
+        </div>`
+        var botonCarrito = document.createElement("button")
+        botonCarrito.id = "boton-borrar"
+        botonCarrito.classList.add('button')
+        botonCarrito.innerHTML = `<span>Add to cart</span>`;
+        carta3.append(botonCarrito)
+        botonCarrito.onclick = function() {
+            addToCart(e.id)
+        }
       }
       let checked1 = (document.getElementById("customCheck1")) ;
       let checked2 = (document.getElementById("customCheck2")) ;
@@ -82,6 +103,7 @@
       checked2.addEventListener("click",filtro);
       checked3.addEventListener("click",filtro);
       checked4.addEventListener("click",filtro);
+
       function filtro(e){
           let elementos =  Array.from(document.getElementsByClassName(e.target.value));
           elementos.forEach(element => {
@@ -109,3 +131,17 @@
             document.getElementById("SKU"+element.id).style.display = "none";
         }});
     })
+
+    function addToCart(id) {
+        if(localStorage.getItem('login')){
+            if(carrito.includes(id)){
+                console.log('elemento ya esta en la lista');
+            }else{
+                carrito.push(id)
+            }
+            localStorage.setItem(localStorage.getItem('login'),carrito);
+        }
+        else{
+            window.location.href = "loginRegistro.html";
+        }
+    }  
