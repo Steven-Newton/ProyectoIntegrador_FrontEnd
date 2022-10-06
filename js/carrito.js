@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 let carrito = [];
 if(localStorage.getItem(localStorage.getItem('login'))){
      carrito = localStorage.getItem(localStorage.getItem('login')).split(',');
@@ -24,6 +25,8 @@ const getData = () => {
   }
 getData();
 =======
+=======
+>>>>>>> 156a4db (added foundations for cart system)
 let carrito = [];
 if(localStorage.getItem(localStorage.getItem('login'))){
      carrito = localStorage.getItem(localStorage.getItem('login')).split(',');
@@ -48,4 +51,7 @@ const getData = () => {
       });
   }
 getData();
+<<<<<<< HEAD
+>>>>>>> 156a4db (added foundations for cart system)
+=======
 >>>>>>> 156a4db (added foundations for cart system)
