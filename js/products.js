@@ -87,13 +87,11 @@
         <span class="rating-number">${e.rating.rate}</span>
         </div>`
         var botonCarrito = document.createElement("button")
-        botonCarrito.id = "boton-borrar"
         botonCarrito.classList.add('button')
         botonCarrito.innerHTML = `<span>Agregar al carrito</span>`;
         carta3.append(botonCarrito)
         botonCarrito.onclick = function() {
-            addToCart(e.id, e.title, e.price, e.image)
-            console.log(e.id, e.title, e.price, e.image);
+            addToCart(e.id)
         }
       }
       let checked1 = (document.getElementById("customCheck1")) ;
@@ -133,13 +131,13 @@
         }});
     })
 
-    function addToCart(id, pro, pre, img) {
+    function addToCart(id) {
         if(localStorage.getItem('login')){
-            if(carrito.includes(id, pro, pre, img)){
+            if(carrito.includes(id)){
                 console.log('elemento ya esta en la lista');
                 Swal.fire('Este producto ya se encuentra en el carrito');
             }else{
-                carrito.push(id, pro, pre, img)
+                carrito.push(id)
                 Swal.fire('Tu producto se ha añadido al carrito');
             }
             localStorage.setItem(localStorage.getItem('login'),carrito);
@@ -151,22 +149,3 @@
         }
     }  
 
-    //answer.innerHTML+=`La respuesta es ${data.answer}, ${data.forced}, ${data.image}`;
-            //answer.style.display = "block";
-            //setTimeout(()=>{answer.style.display = "none"}, 3000);
-
-    //Function addToCart Original
-    /* function addToCart(id) {
-        if(localStorage.getItem('login')){
-            if(carrito.includes(id)){
-                console.log('elemento ya esta en la lista');
-            }else{
-                carrito.push(id)
-            }
-            localStorage.setItem(localStorage.getItem('login'),carrito);
-            console.log('Se esta añadiendo al carrito');
-        }
-        else{
-            window.location.href = "loginRegistro.html";
-        }
-    } */ 
