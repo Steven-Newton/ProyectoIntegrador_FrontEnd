@@ -63,8 +63,9 @@ function addProduct(e){
                                 botonElminar.innerHTML = `X`;
                                 botonElminar.onclick = function() {
                                     tr.remove()
-                                    carrito.splice(carrito.indexOf(e.id),1)
-                                    localStorage.setItem(localStorage.getItem('login'),carrito);
+/*                                 console.log(carrito.splice(carrito.indexOf(e.id),1));
+ */                                 RemovefromCart(carrito,e.id)    
+                                     localStorage.setItem(localStorage.getItem('login'),carrito);
                                     setTotal(-e.price)
                                 }        
                                 setTotal(e.price)
@@ -75,5 +76,15 @@ function setTotal(subtotal) {
     total +=  parseFloat(subtotal);
     CTotal.innerText =`Total : $${total} MXN`;
 
+
+}
+function RemovefromCart(arreglo,id) {
+    arreglo2=[];   
+    arreglo.forEach( v =>{
+        if(v!=id){
+            arreglo2.push(v);
+        }
+    } )
+    carrito = arreglo2;
 
 }
