@@ -58,9 +58,38 @@ btn.addEventListener("click", function (e) {
     check = false;
   }
     if (check) {
-        let ContenidoTabla ={"id":id.value,"title":title.value,"price":(price.value),"description":Description.value,"category":category.value,"image":urlk.value,"rating":{"rate":3+Math.random*2,"count":Math.floor(Math.random*1000) },"descuento":descuento.id+"%"}
+        let ContenidoTabla =
+        {"id":id.value,"title":title.value,"price":(price.value),
+        "description":Description.value,"category":category.value,
+        "image":urlk.value,"rating":{"rate": 4.5,
+        "count":Math.floor(Math.random*1000) },"descuento":descuento.value+"%"}
         lista.push(ContenidoTabla);
         localStorage.setItem(key,JSON.stringify(lista));
     }   
 
 })
+
+
+const imagen1 = document.getElementById('imagen1');
+const imagen2 = document.getElementById('imagen2');
+
+const cargarImagen = (entradas, observador) => {
+   // console.log('Ejecuta!');         //calcula cuando la imagen esta dentro de viewport
+  // console.log(entradas);
+  // console.log(observador);
+  entradas.forEach((entrada) =>{
+    if(entrada.isIntersecting){
+      entrada.target.classList.add('visible');
+    //console,console.log('La imagen esta en el viewport');    //aqui la imagen esta adentro 
+    }
+  });
+};
+
+const observador = new IntersectionObserver(cargarImagen, {
+    root: null,
+    rootMargin: '350px 0px 0px 0px',
+    threshold: 0.5
+});
+
+observador.observe(imagen1);
+observador.observe(imagen2);

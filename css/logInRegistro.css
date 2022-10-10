@@ -1,0 +1,303 @@
+:root {
+    /* COLORES */
+    --white: #e9e9e9;
+    --gray: #333;
+    --blue: #0367a6;
+    --lightblue: #008997;
+
+    /* RADIO */
+    --button-radius: 0.7rem;
+
+    /* TAMAÑOS */
+    --max-width: 758px;
+    --max-height: 505px;
+
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+} */
+}
+
+.separacion{
+    height: 60px;
+}
+
+.main {
+    align-items: center;
+    background-color: var(--white);
+    background: url("/SRC/LGBT.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.form__title {
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 1.25rem;
+}
+
+.linkContraseña {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+    text-decoration: none;
+}
+
+.containerc {
+    background-color: var(--white);
+    border-radius: var(--button-radius);
+    box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
+        0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+    height: var(--max-height);
+    max-width: var(--max-width);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.containerc__form {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.containerc--signin {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.containerc.right-panel-active .containerc--signin {
+    transform: translateX(100%);
+}
+
+.containerc--signup {
+    left: 0;
+    opacity: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.containerc.right-panel-active .containerc--signup {
+    animation: show 0.6s;
+    opacity: 1;
+    transform: translateX(100%);
+    z-index: 5;
+}
+
+.containerc__overlay {
+    height: 100%;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: transform 0.6s ease-in-out;
+    width: 50%;
+    z-index: 100;
+}
+
+.containerc.right-panel-active .containerc__overlay {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background-color: var(--lightblue);
+    background: url("/SRC/LGBT.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: -100%;
+    position: relative;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+    width: 200%;
+    -webkit-transform-origin-x: inherit;
+}
+
+.containerc.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay__panel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+    width: 50%;
+}
+
+.overlay--left {
+    transform: translateX(-20%);
+}
+
+.containerc.right-panel-active .overlay--left {
+    transform: translateX(0);
+}
+
+.overlay--right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.containerc.right-panel-active .overlay--right {
+    transform: translateX(20%);
+}
+.overlay__panel .btn , #realSignIn,  #realSignUp, .btn{
+    background-color: var(--blue);
+    background-color:#E34C4C   ;
+    /*#4462F0     #FF4163    #E30FB4  */
+    /*background-image: linear-gradient(to left, #da183b, #ec581c, #ee8c00, #e2bd00, #c5eb12);*/
+    border-radius: 20px;
+    border: 1px solid var(--black);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+ .form>.btn {
+    margin-top: 1.5rem;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.form {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    height: auto;
+    text-align: center;
+}
+
+.input {
+    background-color: #fff;
+    padding: 0.9rem 0.9rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    border: 1px solid #0da2ff;
+}
+
+@keyframes show {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+
+}
+
+#registratecss{
+    display: none;
+}
+#signincss{
+    display: none;
+}
+@media (max-width: 767px){
+
+
+    /* .overlay{
+        display: none;
+    } */
+    .containerc__overlay{
+        display: none;
+    }
+    .containerc.right-panel-active .containerc--signup{
+    transform: none;
+    }
+    .containerc--signup{
+        width: 100%;
+    }
+    #registratecss{
+    display:inline;
+    }
+    #signincss{
+        display: inline;
+    }
+    .containerc__form .containerc--signin {
+        transform: none;
+    }
+    .containerc--signin{
+        width: 100%;
+    }
+
+
+}
+
+/* 
+/* ESTILO DEL EFECTO DE LOS PLACEHOLDERS*/
+/* 
+
+
+
+.input-group{
+
+    position: relative;
+
+}
+
+.input{
+
+    padding: 10px;
+    background: #d3edf8;
+    border-radius: 2px;
+    outline: none;
+    color: #444444;
+    border: 1px solid #0da2ff;
+
+}
+
+.placeholderl{
+
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    color: #0da2ff;
+    transition: 0.3s;
+    pointer-events: none;
+
+}
+
+.input:focus + .placeholder, .input:not(:placeholder-shown) +.placeholder{
+
+    top: -10px;
+
+    background-color: #d3edf8;
+
+} */ 
