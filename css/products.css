@@ -229,11 +229,19 @@ body {
     --l: 2px;
     --t: 12px;
 }
-/* .imgtest{
-    max-width: 100vw;
-    max-height: 100vh;
-    object-fit: cover;
-} */
+.imgtest{
+    width: 100%;
+    height: 26vw;
+    object-fit:cover;
+} 
+@media (max-width: 1000px) {
+  .imgtest{
+    width: 100%;
+    height: 100vw;
+    object-fit:cover;
+} 
+}
+@med
 .button .cart {
     position: absolute;
     left: 50%;
@@ -354,7 +362,9 @@ html {
 }
 
 
-
+.boton-carrito{
+  background-color: black;
+}
 
 
 

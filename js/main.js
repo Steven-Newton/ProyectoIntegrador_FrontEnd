@@ -1,8 +1,11 @@
 
+barra = document.getElementById("barra")
+
 window.addEventListener("load", function(){
+  barra.classList.add("sticky-top")
+  barra.classList.add("headerA")
   barra.innerHTML += `
- <header class="sticky-top headerA"> 
-  <nav class="navbar navbar-expand-lg   ">
+  <nav class="navbar navbar-expand-lg ">
       <a  class="navbar-brand" href="../pages/index.html"><img class="ecoinclusive" src="../src/logoSEI.png" alt="" srcset=""></a>
       <button  style="color:white;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -16,12 +19,12 @@ window.addEventListener("load", function(){
             <a style="color:white;" class="nav-link" href="./carrito.html">Carrito de compras</a>
           </li>
           <li class="nav-item">
-              <a style="color:white;" class="nav-link" href="./loginRegistro.html">Inicio de sesión</a>
+            <a style="color:white;" class="nav-link" href="./loginRegistro.html">Inicio de sesión</a>
            </li>
         </ol>
       </div>
   </nav>
-</header><hr>`
+`
 
 document.getElementById("carritoN").style.display = "none";
 if (localStorage.getItem('login')) {
@@ -40,29 +43,6 @@ barra2.innerHTML +=`
       </div> `
 });
 
-$(document).ready(function () {
-
-  $("#itemslider").carousel({ interval: 1000 });
-
-
-  $(".carousel-showmanymoveone .item").each(function () {
-    var itemToClone = $(this);
-
-    for (var i = 1; i < 6; i++) {
-      itemToClone = itemToClone.next();
-
-      if (!itemToClone.length) {
-        itemToClone = $(this).siblings(":first");
-      }
-
-      itemToClone
-        .children(":first-child")
-        .clone()
-        .addClass("cloneditem-" + i)
-        .appendTo($(this));
-    }
-  });
-});
 
 
 

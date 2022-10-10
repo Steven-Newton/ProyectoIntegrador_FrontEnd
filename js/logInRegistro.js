@@ -92,7 +92,7 @@ function ValidateAll(name,email,tel,password,repeatPassword){
                     if(ValidatePassword(password,repeatPassword)){
                         AddValid(Password);
                         AddValid(RepeatPassword);
-                        Alerta("success","Registro exitoso.","rgba(00,20,10,0.2)");
+                        Alerta("success","Registro exitoso.");
 
                         user = new usuario(Name.value,Email.value,Password.value,Phone.value,lista.length);
                         console.log(user);
@@ -160,14 +160,14 @@ function ValidateName(name){
     }
 }
 
-function Alerta(estado,mensaje, color="rgba(10,20,30,1)"){
+function Alerta(estado,mensaje){
     Swal.fire({
         icon: estado,
         title: mensaje,
         width: 600,
         padding: '3em',
-        color: color,
-        background: 'rgba(0,0,0,0.2)'})
+        color: 'rgba(255,255,255,.9)',
+        background: 'rgba(0,0,0,.9)'})
 }
 
 function AddInvalid(campo){
