@@ -41,7 +41,9 @@ barra2.innerHTML +=`
 });
 
 $(document).ready(function () {
-  $("#itemslider").carousel({ interval: 3000 });
+
+  $("#itemslider").carousel({ interval: 1000 });
+
 
   $(".carousel-showmanymoveone .item").each(function () {
     var itemToClone = $(this);
