@@ -179,7 +179,7 @@ body {
 /* ______GRID ABOUT US______ */
 .founders{
     font-family: 'Rubik Dirt';
-    font-size: 4rem;
+    font-size: 2rem;
     color: #C7D322;
 
 }
@@ -247,13 +247,14 @@ body {
 	text-align: center;
 	position: absolute;
 	top: 40%;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight:900;
-	color: rgb(1, 1, 1);
-    -webkit-text-stroke: 0.06rem rgb(252, 241, 241);
+	color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.06rem rgb(8, 8, 8);
 	/* font-size: 18px; */
 	width: 100%;
     font-weight: 600; 
+    display: none;
 }
 
 
@@ -263,18 +264,18 @@ body {
 }
 
 #galeria img{
-	filter: grayscale(1);
+	filter: grayscale(0);
         
 }
 
 #galeria .cuadrado-perfecto:hover img{
-	filter: grayscale(0);
-    filter: blur(.5);
+	filter: grayscale(1);
+    filter: blur(0.5);
 
 }
 
 #galeria .cuadrado-perfecto:hover h4{
-	display: none;
+	display: block;
  
 }
 
