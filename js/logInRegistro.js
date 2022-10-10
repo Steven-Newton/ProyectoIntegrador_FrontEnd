@@ -10,10 +10,9 @@ const signUpB = document.getElementById("signUp");
 const fistForm = document.getElementById("form1");
 const secondForm = document.getElementById("form2");
 const containerc = document.querySelector(".containerc");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
+
+
+
 Name.value="",Phone.value="",email.value="",RepeatPassword.value="",Password.value="";
 
 
@@ -22,8 +21,8 @@ let campoTel = document.getElementById("tel");
 let campoEmail = document.getElementById("email");
 let campoContraseña = document.getElementById("pass");
 let validaContraseña = document.getElementById("pass2"); 
-<<<<<<< HEAD
-=======
+
+
 const passwordV = document.getElementById("passwordIngresar");
 const emailV = document.getElementById("mailIngresar");
 const registratecss = document.getElementById("registratecss");
@@ -46,13 +45,6 @@ if (localStorage.getItem(key)) {
         mapaUsuario.set(e.email,e);
         }); 
 }
->>>>>>> 80e26182931d6f5fac939523c77b41789af56ff2
-=======
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
-
-signInBtn.addEventListener("click", () => {
-  containerc.classList.remove("right-panel-active");
-});  //desliza    
 
 signInBtn.addEventListener("click", () => {
 	containerc.classList.remove("right-panel-active");
@@ -64,11 +56,7 @@ signUpB.addEventListener("click", () => {
 
 fistForm.addEventListener("submit", (e) => e.preventDefault());
 secondForm.addEventListener("submit", (e) => e.preventDefault());
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
- 
 /*boton login*/
 signInB.addEventListener("click",function(e) {
     e.preventDefault();
@@ -82,22 +70,15 @@ signInB.addEventListener("click",function(e) {
 });
 
 /*boton registro de usuario*/
->>>>>>> 80e26182931d6f5fac939523c77b41789af56ff2
-=======
 
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
 signUpBtn.addEventListener("click", function(e){
 	e.preventDefault();
     ValidateAll(Name.value,Email.value,Phone.value,Password.value,RepeatPassword.value);
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 /* funcion validacion para registro de usuario */
->>>>>>> 80e26182931d6f5fac939523c77b41789af56ff2
-=======
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
+
 function ValidateAll(name,email,tel,password,repeatPassword){
     if(name=="" && email=="" && tel=="" && password=="" && repeatPassword==""){
         Alerta("error","Debes llenar todos los campos.")
@@ -112,19 +93,13 @@ function ValidateAll(name,email,tel,password,repeatPassword){
                         AddValid(Password);
                         AddValid(RepeatPassword);
                         Alerta("success","Registro exitoso.","rgba(00,20,10,0.2)");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
                         user = new usuario(Name.value,Email.value,Password.value,Phone.value,lista.length);
                         console.log(user);
                         lista.push(user)
                         mapaUsuario.set(user.email,user.password);
                          localStorage.setItem(key,JSON.stringify(lista));
                          Name.value="",Phone.value="",Email.value="",RepeatPassword.value="",Password.value="";
-
->>>>>>> 80e26182931d6f5fac939523c77b41789af56ff2
-=======
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
                     }else{
                         AddInvalid(Password);
                         AddInvalid(RepeatPassword);
@@ -132,15 +107,12 @@ function ValidateAll(name,email,tel,password,repeatPassword){
                     }
                 }else{
                     AddInvalid(Email);
-<<<<<<< HEAD
-<<<<<<< HEAD
                     Alerta("error","Email inválido.");
-=======
+
                     Alerta("error","Email inválido o ya registrado");
->>>>>>> 80e26182931d6f5fac939523c77b41789af56ff2
-=======
+
                     Alerta("error","Email inválido.");
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
+
                 }
             }else{
                 AddInvalid(Phone);
@@ -151,14 +123,7 @@ function ValidateAll(name,email,tel,password,repeatPassword){
             Alerta("error", "Nombre Inválido.");
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 80e26182931d6f5fac939523c77b41789af56ff2
-=======
-
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
 }
 
 function ValidatePassword(pass1,pass2){
@@ -172,15 +137,7 @@ function ValidatePassword(pass1,pass2){
 function ValidateEmail(email) {
 	let valid =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-<<<<<<< HEAD
-<<<<<<< HEAD
-	if (email.match(valid)) {
-=======
 	if (email.match(valid)&&!mapaUsuario.has(email)) {
->>>>>>> 80e26182931d6f5fac939523c77b41789af56ff2
-=======
-	if (email.match(valid)) {
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
 	  return true;
 	} else {
 	  return false;
@@ -222,17 +179,6 @@ function AddValid(campo){
     campo.classList.add("is-valid");
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
-key = "user";
-let lista = [];
-if (localStorage.getItem(key)) {
-    lista = (JSON.parse(localStorage.getItem(key)));
-    lista.forEach(e => {
-    });
-}
 
 signUpBtn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -241,45 +187,22 @@ signUpBtn.addEventListener("click", function (e) {
     lista.push(user)
    localStorage.setItem(key,JSON.stringify(lista));
 })
-<<<<<<< HEAD
-=======
 
->>>>>>> 80e26182931d6f5fac939523c77b41789af56ff2
-=======
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
 class usuario {
         name = "";
         email = "";
         password = "";
         phoneNumber = "";
-<<<<<<< HEAD
-<<<<<<< HEAD
         id = 0;
     constructor (name,email,password,phoneNumber,id)
-=======
-/*         id = 0;
- */    constructor (name,email,password,phoneNumber,id)
->>>>>>> 80e26182931d6f5fac939523c77b41789af56ff2
-=======
-        id = 0;
-    constructor (name,email,password,phoneNumber,id)
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
+
     {
          this.name = name
          this.email = email
          this.password = password
          this.phoneNumber = phoneNumber
-<<<<<<< HEAD
-<<<<<<< HEAD
          this.id = id;
     }//constructor
-=======
-/*          this.id = id;
- */    }//constructor
->>>>>>> 80e26182931d6f5fac939523c77b41789af56ff2
+
 }
-=======
-         this.id = id;
-    }//constructor
-}
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
+
