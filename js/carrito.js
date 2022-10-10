@@ -52,7 +52,7 @@ function addProduct(e){
                                     <img src=${e.image}  alt="">
                                     <h6 class="title">${e.title}</h6>
                                 </td>
-                                <td class="table__price"><p>$${e.price} MN</p></td>`   
+                                <td class="table__price"><p>$${e.price} MXN</p></td>`   
                                 const td2Btn = document.createElement("td")
                                 tr.append(td2Btn)
                                 var botonElminar = document.createElement("button")
