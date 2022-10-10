@@ -8,7 +8,7 @@ window.addEventListener("load", function(){
   <nav class="navbar navbar-expand-lg ">
       <a  class="navbar-brand" href="../pages/index.html"><img class="ecoinclusive" src="../src/logoSEI.png" alt="" srcset=""></a>
       <button  style="color:white;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+  <img src="../src/icons8-list-30.png" class="navbar-toggler-icon">
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ol  class="navbar-nav ml-auto ">
