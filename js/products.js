@@ -87,9 +87,8 @@
         <span class="rating-number">${e.rating.rate}</span>
         </div>`
         var botonCarrito = document.createElement("button")
-        botonCarrito.id = "boton-borrar"
         botonCarrito.classList.add('button')
-        botonCarrito.innerHTML = `<span>Add to cart</span>`;
+        botonCarrito.innerHTML = `<span>Agregar al carrito</span>`;
         carta3.append(botonCarrito)
         botonCarrito.onclick = function() {
             addToCart(e.id)
@@ -136,12 +135,17 @@
         if(localStorage.getItem('login')){
             if(carrito.includes(id)){
                 console.log('elemento ya esta en la lista');
+                Swal.fire('Este producto ya se encuentra en el carrito');
             }else{
                 carrito.push(id)
+                Swal.fire('Tu producto se ha añadido al carrito');
             }
             localStorage.setItem(localStorage.getItem('login'),carrito);
+            console.log('Se esta añadiendo al carrito');
+            
         }
         else{
             window.location.href = "loginRegistro.html";
         }
     }  
+
