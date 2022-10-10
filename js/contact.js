@@ -68,7 +68,7 @@ btnSubmit.addEventListener("click", function (e) {
       Subject : "Contacto",
       Body : `${campoNombre.value}(${campoEmail.value}): ${campoTel.value} dice:  ${campoMensaje.value} `
   }).then(
-    message => alert(message)
+    message =>     Swal.fire('Gracias por mandar un mensaje, nos comunicaremos pronto')
   ); 
   }
 

@@ -74,7 +74,7 @@ function addProduct(e){
 
 function setTotal(subtotal) {
     total +=  parseFloat(subtotal);
-    CTotal.innerText =`Total : $${total} MXN`;
+    CTotal.innerText =`Total : $${total.toFixed(2)} MXN`;
 
 
 }

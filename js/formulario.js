@@ -19,17 +19,6 @@ let campoEmail = document.getElementById("email");
 let campoContraseña = document.getElementById("pass");
 let validaContraseña = document.getElementById("pass2"); 
 
-signInBtn.addEventListener("click", () => {
-  containerc.classList.remove("right-panel-active");
-});  //desliza    
-
-signInBtn.addEventListener("click", () => {
-	containerc.classList.remove("right-panel-active");
-});  //desliza a la derecha al formulario "Regístrate"
-
-signUpB.addEventListener("click", () => {
-	containerc.classList.add("right-panel-active");
-}); //desliza a la izquierda al formulario "Accede"
 
 fistForm.addEventListener("submit", (e) => e.preventDefault());
 secondForm.addEventListener("submit", (e) => e.preventDefault());
@@ -136,7 +125,6 @@ if (localStorage.getItem(key)) {
 
 signUpBtn.addEventListener("click", function (e) {
     e.preventDefault();
-<<<<<<< HEAD
 
    let check = true;
     if ((isNaN(title.value))&&(title.value.replace(/ /g, "").length>4)){
@@ -192,35 +180,7 @@ signUpBtn.addEventListener("click", function (e) {
 })
 
 
-const imagen1 = document.getElementById('imagen1');
-const imagen2 = document.getElementById('imagen2');
 
-const cargarImagen = (entradas, observador) => {
-   // console.log('Ejecuta!');         //calcula cuando la imagen esta dentro de viewport
-  // console.log(entradas);
-  // console.log(observador);
-  entradas.forEach((entrada) =>{
-    if(entrada.isIntersecting){
-      entrada.target.classList.add('visible');
-    //console,console.log('La imagen esta en el viewport');    //aqui la imagen esta adentro 
-    }
-  });
-};
-
-const observador = new IntersectionObserver(cargarImagen, {
-    root: null,
-    rootMargin: '350px 0px 0px 0px',
-    threshold: 0.5
-});
-
-observador.observe(imagen1);
-observador.observe(imagen2);
-=======
-    user = new usuario(Name.value,Email.value,Password.value,Phone.value,lista.length);
-    console.log(user);
-    lista.push(user)
-   localStorage.setItem(key,JSON.stringify(lista));
-})
 class usuario {
         name = "";
         email = "";
@@ -236,4 +196,3 @@ class usuario {
          this.id = id;
     }//constructor
 }
->>>>>>> d7d333898b9deddba770e587accd8af5992625a6
