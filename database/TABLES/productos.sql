@@ -1,1 +1,0 @@
-SELECT * FROM ecoinclusivedb.productos;
