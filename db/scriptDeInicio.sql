@@ -29,13 +29,13 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ecoinclusivedb`.`productos` (
   `producto_id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(100) NOT NULL,
-  `descripción` VARCHAR(500) NULL,
+  `titulo` VARCHAR(100) NOT NULL,
   `precio` DECIMAL(6,2) NOT NULL,
-  `descuento` INT NULL,
+  `descripcion` VARCHAR(500) NULL,
+  `categoria_id` INT NOT NULL,
   `imagen` VARCHAR(1000) NOT NULL,
   `sku` VARCHAR(10) NOT NULL,
-  `categoria_id` INT NOT NULL,
+  `descuento` INT NULL,
   PRIMARY KEY (`producto_id`, `categoria_id`))
 ENGINE = InnoDB;
 
