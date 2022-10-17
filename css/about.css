@@ -7,8 +7,8 @@ main {
     text-align: center;
     line-height: 15px;
     padding: 20px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    /* text-transform: uppercase; */
 }
 
 
@@ -140,41 +140,7 @@ body {
 #l6{
     background-color: rgb(196, 49, 196);
 }
-@media (min-width: 576px) {
-  html  {
-    font-size:12px;
-    padding:6px 12px;
-    align-items: center;
-  }
-  #logoabout{
-    width: 30rem;
-    margin: 2rem;
-  }
-  .amv{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 1pt;      /* para separar entgre letras */
-    word-spacing: 5pt;
-    line-height: 20pt;
-    
-    }
-    #detallesNosotros{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        letter-spacing: 1pt;      /* para separar entgre letras */
-        word-spacing: 5pt;/* para la separacion entre palabras */ 
-        line-height: 20pt;/* para la separacion entre lineas */ 
-    }
-}
 
-@media (min-width: 768px) {
-  html {
-    font-size:12px;
-    padding:6px 12px;
-  }
-}
 
 /* ______GRID ABOUT US______ */
 .founders{
@@ -279,12 +245,194 @@ body {
  
 }
 
+
+
+.prueba{
+    padding-left: 10%;
+}
+  .container1{
+    position: relative;
+    
+    align-items: center;
+  }
+  .textcen{
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    padding: 25px;
+    font-size: 15px;
+  }
+  .container1 .card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    align-content: center;
+  }
+  
+  .container1 .card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #373636;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container1 .card:hover:before{
+    clip-path: circle(300px at 80% -30%);
+  }
+  
+  .container1 .card:after{
+    /* content: 'Ecoinclusive'; */
+    position: absolute;
+    top: 10%;
+    left: -20%;
+    font-size: 4em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(252, 247, 247, 0.05)
+  }
+  
+  .container1 .card .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 100%;
+    height: 200px;
+    transition: 0.5s;
+  }
+  
+  .container1 .card:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+      
+  }
+  
+  .container1 .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 200px;
+  } 
+  
+  .container1 .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 15;
+  }
+.prueba{
+    padding-right: 5%;
+}
+  .container1 .card:hover .contentBx{
+    height: 280px;
+  }
+  
+  .container1 .card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .container1 .card .contentBx .size, .container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .container1 .card:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  .container1 .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+  }
+
+  
+  .container1 .card:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+    
+  }
+  
+
 /* responviso */
+
+@media (min-width: 576px) {
+  html  {
+    font-size:12px;
+    padding:6px 12px;
+    align-items: center;
+  }
+  #logoabout{
+    width: 30rem;
+    margin: 2rem;
+  }
+  .amv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1pt;      /* para separar entgre letras */
+    word-spacing: 5pt;
+    line-height: 20pt;
+
+    
+    }
+    #detallesNosotros{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 1pt;      /* para separar entgre letras */
+        word-spacing: 5pt;/* para la separacion entre palabras */ 
+        line-height: 20pt;/* para la separacion entre lineas */ 
+    }
+    
+    .container1 .card .imgBx img{
+        width: 40%;
+    }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size:12px;
+    padding:6px 12px;
+  }
+  .prueba{
+    padding-bottom: 10%;
+  }
+  
+}
 
 @media(max-width: 767px)
 {
 
-
+    
+    .container1{
+        /* padding-left: 5%; */
+        padding-bottom: 10%;
+    }
 	.container
 	{
 		width: 100%;
@@ -302,13 +450,33 @@ body {
 	}
 
 }
-
+@media(max-width: 850px){
+    html {
+        font-size:14px;
+        padding:8px 12px;
+      }
+   
+    .container1 {
+        padding-left: 10%;
+        padding-bottom: 10%;
+    }
+   
+}
 @media (min-width: 992px) {
   html {
     font-size:14px;
     padding:8px 12px;
   }
+  .prueba{
+    padding-left: 15%;
+   
 }
+.container1{
+  
+    padding-bottom: 10%;
+}
+}
+
 
 @media (min-width: 1200px) {
   html {
@@ -322,6 +490,27 @@ body {
         opacity: 0;
         padding:8px 12px;
     }
+  
   }
+  @media (max-width:450px){
+    .container1 .card  {
+        width: 200px;
+        height: 250px;
 
-
+        
+    }
+    .prueba{
+        padding-right: 50%;
+    }
+ 
+    .container1 .card .imgBx img{
+        display: none;
+        padding-left: 0%;
+        padding-right: 40%;
+        font-size: 12px;
+    } 
+    .textcen{
+        font-size: 12px;
+    }
+    
+}
