@@ -67,7 +67,7 @@ function additem(e) {
                     <div class="d-flex justify-content-between align-items-center"
                         <h5 class="dress-name">${e.title}</h5>
                         <div class="d-flex flex-column mb-2">
-                            <span class="new-price">${e.price}$</span>
+                            <span class="new-price">$${e.price}MXN</span>
                         </div>
                     </div>
                     <div class="d-flex justify-content-between align-items-center pt-1">
