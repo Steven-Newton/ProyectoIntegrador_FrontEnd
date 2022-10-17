@@ -1,22 +1,35 @@
 .table-hover{
-    min-height: 70vh;
-    max-width:  1000px;
+    min-height: 100%;
+    max-width:  100%;
     margin: 0 auto;
     width: 100%;
-    
+} 
+
+
+.img-carta{
+/*     width: 20vw;
+ */    height: 30vw;
+    object-fit: cover;
+}
+ 
+#div-prev{
+height: 50vh;
+position: sticky;
+position: -webkit-sticky;
+top: 10vh;
 }
 
-.table__productos{
-    display: flex;
-    
+main:nth-child(odd){
+    flex-direction: row-reverse;
 }
 
 .table__productos > img{
-    width: 9rem;
+    width: 2.5rem;
     object-fit: contain;
     border-radius: 6px;
     margin-right: 20px;
 }
+
 
 .table__cantidad > input{
     width: 60px;
@@ -27,4 +40,5 @@
     margin-bottom: 20px;
     background-color: rgba(43, 211, 236, 0.918);
 }
+/**/
 
