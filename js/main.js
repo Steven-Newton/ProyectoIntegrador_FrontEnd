@@ -13,13 +13,13 @@ window.addEventListener("load", function(){
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ol  class="navbar-nav ml-auto ">
           <li class="nav-item">
-            <a style="color:white;" class="nav-link" href="./products.html">Productos</a>
+            <a style="color:white;" class="nav-link" href="./products.html"> Productos</a>
           </li>
           <li class="nav-item"  id="carritoN">
-            <a style="color:white;" class="nav-link" href="./carrito.html">Carrito de compras</a>
+            <a style="color:white;" class="nav-link" href="./carrito.html"><i class="bi bi-cart3"></i> Carrito</a>
           </li>
           <li class="nav-item">
-            <a style="color:white;" class="nav-link" href="./loginRegistro.html">Inicio de sesión</a>
+            <a style="color:white;" class="nav-link" href="./loginRegistro.html"><i class="bi bi-box-arrow-in-right"></i> Inicio de sesión</a>
            </li>
         </ol>
       </div>
@@ -36,8 +36,8 @@ barra2.innerHTML +=`
     <div class="containernav text-center ">
        <ul class="list-inline">
               <li class="list-inline-item"><a style="color:white;" href="./about.html">Nosotros</a></li>
-              <li class="list-inline-item"><a style="color:white;" href="./donaciones.html">Donaciones</a></li>
-              <li class="list-inline-item"><a style="color:white;" href="./contact.html">Contacto</a></li>
+              <li class="list-inline-item"><a style="color:white;" href="./donaciones.html"><i class="bi bi-cash-coin"></i> Donaciones</a></li>
+              <li class="list-inline-item"><a style="color:white;" href="./contact.html"><i class="bi bi-telephone"></i> Contacto</a></li>
           </ul>
            <small>Copyright &copy; JavaMonos</small>
       </div> `
