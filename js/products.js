@@ -89,7 +89,7 @@ function additem(e) {
     var botonCarrito = document.createElement("button")
     botonCarrito.classList.add('button')
     botonCarrito.classList.add('boton-carrito')
-    botonCarrito.innerHTML = `<span>Comprar</span>`;
+    botonCarrito.innerHTML = `<span><i class="bi bi-bag-heart-fill"></i> Comprar</span>`;
     carta3.append(botonCarrito)
     botonCarrito.onclick = function () {
         addToCart(e.id)
