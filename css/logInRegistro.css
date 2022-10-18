@@ -159,14 +159,14 @@
 }
 .overlay__panel .btn , #realSignIn,  #realSignUp, .btn{
     background-color: var(--blue);
-    background-color:darkgreen   ;
+    background-color:black;   ;
     /*#4462F0     #FF4163    #E30FB4  */
     /*background-image: linear-gradient(to left, #da183b, #ec581c, #ee8c00, #e2bd00, #c5eb12);*/
     border-radius: 20px;
     border: 1px solid var(--black);
     color: var(--white);
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
     padding: 0.9rem 4rem;
